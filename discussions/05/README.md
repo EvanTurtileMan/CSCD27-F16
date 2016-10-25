@@ -12,18 +12,18 @@ We consider different scenarios in which Mallory controls a host located in diff
 
 5.1 For each host type, explain in technical details how Mallory can either eavesdrop or hijack (MitM) the communication between Alice and Bob.com.
 
-| Host Setting           | Eavesdropping            | Hijaking               |
-| -----------------------|:-----------------------:|:-----------------------:|
-| LAN                    |                         |                         |
-| Route                  |                         |                         |
-| Remote                 |                         |                         |
+| Host Setting | Eavesdropping   | Hijaking            |
+| -------------|:---------------:|:-------------------:|
+| LAN          | packet sniffing | ARP cache poisoning |
+| Route        | packet sniffing | IP/BGP hijacking    |
+| Remote       | DCP or BGPH     | DNS Cache Poisoning |
 
 
  In your analyze, you can consider the following attacks (non-exhaustive):
 
 - Packet sniffing
 - ARP-cache poisoning
-- Route Hijacking (BGP)
+- IP Hijacking (a.k.a BGP hijacking)
 - DNS Spoofing
 
 ## HTTPs as a counter-measure
@@ -31,3 +31,4 @@ We consider different scenarios in which Mallory controls a host located in diff
 Let us now consider that Alice access `Bob.com` via HTTPs.
 
 5.2 Would HTTPs defeat none, some or all attacks identified in 5.1? If so, how could Mallory defeat HTTPs (assuming that generating a valid certificate for Bob.com is not an option)?
+All.
