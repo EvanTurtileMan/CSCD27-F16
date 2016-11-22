@@ -1,0 +1,19 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+
+  config.vm.define "target", autostart: true do |target|
+    target.vm.box = "target"
+    target.vm.box_url = "http://mathlab.utsc.utoronto.ca/courses/cscd27f16/assignment/03/boxes/target.box"
+    target.vm.network "private_network", ip: "10.0.1.101"
+  end
+
+  config.vm.define "attacker", autostart: true do |attacker|
+    attacker.vm.box = "attacker"
+    attacker.vm.box_url = "http://mathlab.utsc.utoronto.ca/courses/cscd27f16/assignment/03/boxes/attacker.box"
+    attacker.vm.network "private_network", ip: "10.0.1.102"
+    attacker.vm.network "forwarded_port", guest: 443, host: 9392
+  end
+
+end

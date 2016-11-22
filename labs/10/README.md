@@ -1,1 +1,3 @@
-# CSCD27 Lab 10: OS Security
+# CSCD27 Lab 10: No Lab
+
+
