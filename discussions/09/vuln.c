@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-vuln:     file format elf32-i386
+// vuln:     file format elf32-i386
 
 // 0804844d <func>:
 void func(char *name)
